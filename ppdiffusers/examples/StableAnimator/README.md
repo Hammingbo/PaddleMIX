@@ -32,7 +32,9 @@ pip install https://paddlenlp.bj.bcebos.com/models/community/junnyu/wheels/ppdif
 pip install -r requirements.txt
 
 
-## 2. 数据准备
+## 3. 数据准备
+
+
 测试样例需要按照以下格式排列：
 ```inference/
 ├── case-1
@@ -48,3 +50,4 @@ pip install -r requirements.txt
 │   ├── faces
 │   └── reference.png
 ```
+poses文件夹包含所有姿势图像，faces文件夹包含所有面部图像，reference.png是参考图像。
