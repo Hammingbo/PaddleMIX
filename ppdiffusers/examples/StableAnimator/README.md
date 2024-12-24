@@ -5,4 +5,4 @@ StableAnimator是由姿势驱动的人体运动动画生成模型，展示了合
 
 ![](https://github.com/Francis-Rings/StableAnimator/raw/main/assets/figures/framework.jpg?raw=true)
 
-注：上图引自 [StableAnimator](https://arxiv.org/abs/2411.17697)。
+注：上图引自 [StableAnimator](https://arxiv.org/abs/2411.17697)。aceee
