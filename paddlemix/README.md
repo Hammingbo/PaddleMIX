@@ -41,8 +41,8 @@ GitHub项目地址: [https://github.com/rishubhpar/debiasing_gen_models](https:/
 
 5. **实施计划：**  
    - 将DG引导采样算法集成到PaddleMIX/ppdiffusers的采样pipeline中。  
-   - 重写基于paddle实现的ADP训练，并集成到现有pipeline中。  
+   - 重写基于paddle实现的ADP训练，集成到现有pipeline中。  
 
 6. **交付内容：**  
-   - 代码库更新：包括DG引导采样算法和ADP训练模块及相应代码测试。  
+   - 代码库更新：包括DG引导采样算法和ADP训练模块及相应代码测试。 
    - 文档更新：算法解释及使用指南。  
