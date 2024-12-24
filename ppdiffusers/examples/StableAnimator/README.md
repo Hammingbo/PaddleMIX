@@ -3,6 +3,9 @@
 ## 1. 模型简介
 StableAnimator是由姿势驱动的人体运动动画生成模型，展示了合成图像的高保真度和ID-perserving能力。动画可由StableAnimator直接合成，无需使用任何与面部相关的后处理工具。具体实现借鉴于[Francis-Rings/StableAnimator](https://github.com/Francis-Rings/StableAnimator/tree/main)
 
+目前用于人物图像动画的扩散模型难以确保身份（ID）的一致性。StableAnimator，这是第一个端到端的ID保持视频扩散框架，它在参考图像和姿势的条件下，无需任何后处理即可合成高质量的视频。StableAnimator包含精心设计的模块，用于训练和推理，努力实现身份一致性。首先，StableAnimator使用现成的提取器计算image-embedding和face-embdeing。然后，StableAnimator引入了一种新的分布感知ID-adapter，该adepter可以防止时间层引起的干扰，同时通过对齐来保留ID。在推理过程中，StableAnimator提出基于Hamilton-Jacobi-Bellman（HJB）方程的优化方法，以进一步提高人脸质量。
+
+
 ![](https://github.com/Francis-Rings/StableAnimator/raw/main/assets/figures/framework.jpg?raw=true)
 ![](https://github.com/Francis-Rings/StableAnimator/raw/main/assets/figures/case-18.gif?raw=true)
 
@@ -27,3 +30,21 @@ pip install https://paddlenlp.bj.bcebos.com/models/community/junnyu/wheels/ppdif
 
 # 安装其他所需的依赖, 如果提示权限不够，请在最后增加 --user 选项
 pip install -r requirements.txt
+
+
+## 2. 数据准备
+测试样例需要按照以下格式排列：
+```inference/
+├── case-1
+│   ├── poses
+│   ├── faces
+│   └── reference.png
+├── case-2
+│   ├── poses
+│   ├── faces
+│   └── reference.png
+├── case-3
+│   ├── poses
+│   ├── faces
+│   └── reference.png
+```
