@@ -8,6 +8,7 @@ InstantID 是由InstantX团队、小红书和北京大学推出的一种SOTA的t
 
 注：上图引自 [InstantID](https://instantid.github.io/)
 
+
 ## 2. 环境准备
 
 通过 `git clone` 命令拉取 PaddleMIX 源码，并安装必要的依赖库。请确保你的 PaddlePaddle 框架版本在 2.6.0 之后，PaddlePaddle 框架安装可参考 [飞桨官网-安装](https://www.paddlepaddle.org.cn/install/quick?docurl=/documentation/docs/zh/install/pip/linux-pip.html)。
