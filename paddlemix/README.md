@@ -16,7 +16,7 @@
 GitHub项目地址: [https://github.com/rishubhpar/debiasing_gen_models](https://github.com/rishubhpar/debiasing_gen_models)  
 将属性预测和分布指导的技术适配到传统扩散模型场景，核心方法包括：  
 1. **属性分布预测器（ADP）：** 用于在给定参考属性分布的情况下，无需重新训练扩散模型即可对现有扩散模型（DMs）进行去偏。具体而言，该方法训练了一个属性分布预测器（Attribute Distribution Predictor，ADP），它能够直接从扩散模型的h-space特征中预测属性分布。
-2. **分布指导（DG）：** 分布指导（Distribution Guidance）用于在逆扩散过程中，根据参考属性分布进行条件生成。在扩散网络的中间特征空间h-space中引入指导机制，从而实现高效的数据训练和快速的无偏的图像生成。
+2. **分布指导（DG）：** 分布指导（Distribution Guidance）用于在逆扩散过程中，根据参考属性分布进行条件生成。在扩散网络的中间特征空间h-space中引入指导机制，从而实现高效的数据训练和快速的无偏图像生成。
 
 ---
 
