@@ -23,7 +23,7 @@ GitHub项目地址: [https://github.com/rishubhpar/debiasing_gen_models](https:/
 ### 方法细节:  
 
 1. **数据集：**  
-   我们以面部数据集为研究对象，因为这些数据集通常存在显著的人口统计偏差，如性别、种族等。利用预训练的属性预测模型，为CelebA-HQ每个图像生成伪标签,并利用去噪Unet提取图像的h-vector，与对应的标签组成paris，用来训练ADP。
+   我们以面部数据集为研究对象，因为这些数据集通常存在显著的人口统计偏差，如性别、种族等。利用预训练的属性预测模型，为CelebA-HQ每个图像生成伪标签,并利用去噪Unet提取图像的h-vector，与对应的标签组成pairs，用来训练ADP。
 
 2. **分布引导：**  
    - 为了实现分布指导，我们通过 h-space 分类器构建了分布预测函数 ADP（Attribute Distribution Predictor）。  
