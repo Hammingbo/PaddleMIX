@@ -14,16 +14,15 @@
 
 python infer_cogvideox_5b_i2v_vctrl_cli.py \
   --pretrained_model_name_or_path "paddlemix/cogvideox-5b-i2v-vctrl" \
-  --vctrl_path "vctrl_canny_5b.pdparams" \
-  --vctrl_config "vctrl_configs/cogvideox_5b_i2v_vctrl_config.json" \
-  --control_video_path "guide_values_1.mp4" \
-  --ref_image_path "reference_image_1.jpg" \
-  --control_mask_video_path 'mask_values_1.mp4' \
-  --output_dir "infer_outputs/pose2video" \
-  --prompt "" \
-  --task "pose" \
-  --width 480 \
-  --height 720 \
+  --vctrl_path "weights/canny/vctrl_canny_5b_i2v_vctrl-tiny.pdparams" \
+  --vctrl_config "vctrl_configs/cogvideox_5b_i2v_vctrl_tiny_config.json" \
+  --control_video_path "inferece/canny/case1/guide_values.mp4" \
+  --ref_image_path "inference/caany/case1/reference_image.jpg" \
+  --output_dir "infer_outputs/canny2video/i2v" \
+  --prompt "inference/caany/case1/prompt.txt" \
+  --task "canny" \
+  --width 720 \
+  --height 480 \
   --max_frame 49 \
   --guidance_scale 3.5 \
   --num_inference_steps 25
