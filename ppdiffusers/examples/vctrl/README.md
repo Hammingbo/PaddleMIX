@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="https://github.com/PaddlePaddle/PaddleMIX/assets/22989727/2cd19298-1c52-4d73-a0f7-dcdab6a8ec90" align="middle" width = "600" />
-</p>
-
 # PP-Vctrl: Controlable Video Generation Models
 这个仓库是基于PP-Vctrl的官方实现。
 
@@ -46,7 +42,7 @@ PP-VCtrl 在 Canny2Video、Pose2Video 和 Mask2Video 三个任务的模型的控
         <tr>
             <td>A boat with a flag on it is sailing on the sea.</td> <!-- 第二行的文本描述 -->
             <td><img src="assets/figures/canny_case2_reference.jpg" alt="Reference" width="160"></td>
-            <td><img src="assets/figures/canny_case2_control_image.gif" alt="Control Videos" width="150"></td>
+            <td><img src="assets/figures/canny_case2_control_image.gif" alt="Control Videos" width="160"></td>
             <td><img src="assets/figures/canny_case2_ours_t2v.gif" alt="Ours T2v" width="160"></td>
             <td><img src="assets/figures/canny_case2_ours_i2v.gif" alt="Ours I2v" width="160"></td>
         </tr>
@@ -267,20 +263,18 @@ sh scripts/infer_cogvideox_i2v_pose_vctrl.sh
 
 <img src="assets/models/eval_1.png" style="width:100%">
 </details>
-
+<!-- 
 ## More version
 <details close>
 <summary>Model Versions</summary>
-
-
-
-
-
 </details>
-
+-->
+<!-- 
 ## Contact us
 Users: [Users@example.com](Users@example.com)  
-## BibTex
+-->
+<!-- 
+ ## BibTex
 
 ```
 @article{guo2023animatediff,
@@ -290,4 +284,4 @@ Users: [Users@example.com](Users@example.com)
   year={2025}
 }
 
-```
+```上面的代码打印了一条消息 -->
