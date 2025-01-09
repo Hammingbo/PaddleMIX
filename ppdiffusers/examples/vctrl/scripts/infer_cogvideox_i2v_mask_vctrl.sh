@@ -14,15 +14,16 @@
 
 python infer_cogvideox_i2v_vctrl_cli.py \
   --pretrained_model_name_or_path "paddlemix/cogvideox-5b-i2v-vctrl" \
-  --vctrl_path "weights/poses/vctrl_pose_5b_i2v.pdparams" \
+  --vctrl_path "weights/mask/vctrl_5b_i2v_mask.pdparams" \
   --vctrl_config "vctrl_configs/cogvideox_5b_i2v_vctrl_config.json" \
-  --control_video_path "inference/pose/guide_values.mp4" \
-  --ref_image_path "inference/pose/reference_image.jpg" \
-  --output_dir "infer_outputs/pose2video" \
-  --prompt "" \
-  --task "pose" \
-  --width 480 \
-  --height 720 \
+  --control_video_path "examples/mask/case1/guide_values.mp4" \
+  --ref_image_path "examples/mask/case1/reference_image.jpg" \
+  --control_mask_video_path 'examples/mask/case1/mask_values.mp4' \
+  --output_dir "infer_outputs/mask2video/i2v" \
+  --prompt "examples/mask/case1/prompt.txt" \
+  --task "mask" \
+  --width 720 \
+  --height 480 \
   --max_frame 49 \
   --guidance_scale 3.5 \
   --num_inference_steps 25

@@ -25,7 +25,7 @@ PP-VCtrl 是一个基于**PaddlePaddle**的开源视频生成模型，旨在通�
 
 
 ## 📷 快速展示
-### 1. 通过Canny边缘控制的PP-VCtrl视频生成：
+### 1. 通过边缘控制的PP-VCtrl视频生成：
 <table class="center">
     <thead>
         <tr>
@@ -86,7 +86,7 @@ PP-VCtrl 是一个基于**PaddlePaddle**的开源视频生成模型，旨在通�
     </tbody>
 </table>
 
-### 3. 通过DW-Pose控制的PP-VCtrl视频生成：
+### 3. 通过人体姿态图控制的PP-VCtrl视频生成：
 <table class="center">
     <thead>
         <tr>
@@ -126,10 +126,11 @@ source $(conda info --base)/etc/profile.d/conda.sh
 conda activate PP-VCtrl
 ```
 ```bash
-# 安装3.0.0版本的paddlepaddle-gpu，当前我们选择了cuda11.8的版本，可以查看 https://www.paddlepaddle.org.cn/ 寻找自己适合的版本
-python -m pip install paddlepaddle-gpu==3.0.0b2 -i https://www.paddlepaddle.org.cn/packages/stable/cu118/
 # 安装paddlenlp
 pip install paddlenlp==v3.0.0-beta2
+# 安装3.0.0-beta-2版本的paddlepaddle-gpu，当前我们选择了cuda11.8的版本，可以查看 https://www.paddlepaddle.org.cn/ 寻找自己适合的版本
+python -m pip install paddlepaddle-gpu==3.0.0b2 -i https://www.paddlepaddle.org.cn/packages/stable/cu118/
+
 ```
 ```bash
 # 克隆 PaddleMIX 仓库
@@ -140,7 +141,7 @@ git clone https://github.com/PaddlePaddle/PaddleMIX.git
 cd PaddleMIX
 pip install -e ppdiffusers
 # 进入 vctrl目录
-cd PaddleMIX/ppdiffusers/examples/vctrl
+cd ppdiffusers/examples/vctrl
 # 安装其他所需的依赖
 pip install -r requirements.txt
 ```
@@ -184,7 +185,7 @@ wget -P weights/poses https://bj.bcebos.com/v1/dataset/PaddleMIX/vctrl/paddle_we
 ### 3. 准备预测试数据
 所有测试数据按照以下规则放置，我们已经为你提供了所需的测试案例：
 ```
-inference/
+examples/
 ├── pose/case-1
 │   ├── guide_values.mp4
 │   ├── prompt.txt
@@ -202,29 +203,29 @@ inference/
 
 
 ## 🔥 模型推理和视频生成
-模型的最终推理结果可以在 **./infer_outputs** 中找到。
-#### 3.1 通过Canny边缘控制生成视频
+模型的最终推理结果可以在 **/infer_outputs** 中找到。
+#### 3.1 通过边缘控制生成视频
 ```bash
 ##t2v
-sh scripts/infer_cogvideox_i2v_vctrl.sh
+bash scripts/infer_cogvideox_i2v_canny_vctrl.sh
 
 ##i2v
-sh scripts/infer_cogvideox_t2v_vctrl.sh
+bash scripts/infer_cogvideox_t2v_canny_vctrl.sh
 ```
 
 #### 3.2 通过蒙版控制生成视频
 ```bash
 ##t2v
-sh infer_cogvideox_t2v_mask_vctrl.sh
+bash scripts/infer_cogvideox_t2v_mask_vctrl.sh
 
 ##i2v
-sh infer_cogvideox_i2v_mask_vctrl.sh
+bash scripts/infer_cogvideox_i2v_mask_vctrl.sh
 ```
 ***注意:*** 边缘和蒙版控制模型可以同时支持t2v和i2v模型。 
 #### 3.3 通过人物姿态图控制生成视频
 ```bash
 ##i2v
-sh scripts/infer_cogvideox_i2v_pose_vctrl.sh
+bash scripts/infer_cogvideox_i2v_pose_vctrl.sh
 ```
 ***注意:*** 人物姿态控制模型只适用于i2v模型。 
 #### 3.3 Gradio 应用

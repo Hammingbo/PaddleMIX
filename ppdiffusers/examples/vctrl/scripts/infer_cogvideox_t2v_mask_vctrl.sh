@@ -12,15 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-python infer_cogvideox_i2v_vctrl_cli.py \
-  --pretrained_model_name_or_path "paddlemix/cogvideox-5b-i2v-vctrl" \
-  --vctrl_path "weights/mask/vctrl_5b_i2v_mask_pdparams" \
-  --vctrl_config "vctrl_configs/cogvideox_5b_i2v_vctrl_config.json" \
-  --control_video_path "inference/mask/case1/guide_values.mp4" \
-  --ref_image_path "inference/mask/case1/reference_image.jpg" \
-  --control_mask_video_path 'inference/mask/case1/mask_values.mp4' \
-  --output_dir "infer_outputs/mask2video/i2v" \
-  --prompt "inference/mask/case1/prompt.txt" \
+python infer_cogvideox_t2v_vctrl_cli.py \
+  --pretrained_model_name_or_path "paddlemix/cogvideox-5b-vctrl" \
+  --vctrl_path "weights/mask/vctrl_5b_t2v_mask.pdparams" \
+  --vctrl_config "vctrl_configs/cogvideox_5b_vctrl_config.json" \
+  --control_video_path "examples/mask/case1/guide_values.mp4" \
+  --control_mask_video_path "examples/mask/case1/mask_values.mp4" \
+  --output_dir "infer_outputs/mask2video/t2v" \
+  --prompt "A black car drive on the street" \
   --task "mask" \
   --width 720 \
   --height 480 \
