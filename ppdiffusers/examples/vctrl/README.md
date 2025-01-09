@@ -120,6 +120,7 @@ PP-Vctrl模型是建立在 PaddlePaddle 和 ppdiffusers 上的。以下是使用
 
 ### 1. 设置仓库和环境
 ```bash
+
 # 创建python环境
 conda create -n PP-Vctrl python=3.10 -y
 source $(conda info --base)/etc/profile.d/conda.sh
