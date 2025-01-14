@@ -1,8 +1,4 @@
-# PP-VCtrl: Controlable Video Generation Models
-这个仓库是基于PP-VCtrl的官方实现。
-
-PP-VCtrl 是一个基于**PaddlePaddle**的开源视频生成模型，旨在通过控制视频内容来实现高质量的视频编辑和生成。
-
+# PP-VCtrl
 PP-VCtrl 是一个通用的视频生成控制模型，通过引入辅助条件编码器，能够灵活对接各类控制模块，并且在不改变原始生成器的前提下避免了大规模重训练。该模型利用稀疏残差连接实现对控制信号的高效传递，同时通过统一的条件编码流程，将多种控制输入转换为标准化表示，再结合任务特定掩码以提升适应性。得益于这种统一而灵活的设计，PP-VCtrl 可广泛应用于人物动画、场景转换、视频编辑等视频生成场景。
 
 <img src="assets/models/model.png" style="width:100%">
@@ -20,12 +16,12 @@ PP-VCtrl 是一个通用的视频生成控制模型，通过引入辅助条件�
 ## 📰 新闻
  `[2025-01-08]`:🔥模型推理代码，推理脚本，模型权重，已经发布。训练代码敬请期待！
 ## 🚩 **TODO/最新进展**
-- [x] Vctrl v1
+- [x] PP-VCtrl v1 模型权重
 - [x] Inference code
 
 
 ## 📷 快速展示
-### 1. 通过边缘控制的PP-VCtrl视频生成：
+### 1. 边缘控制的视频生成 (Canny)：
 <table class="center">
     <thead>
         <tr>
@@ -56,7 +52,7 @@ PP-VCtrl 是一个通用的视频生成控制模型，通过引入辅助条件�
 </table>
 
 
-### 2. 通过蒙版控制的PP-VCtrl视频生成：
+### 2. 蒙版控制的视频生成 (Mask)：
 <table class="center">
     <thead>
         <tr>
@@ -86,10 +82,11 @@ PP-VCtrl 是一个通用的视频生成控制模型，通过引入辅助条件�
     </tbody>
 </table>
 
-### 3. 通过人体姿态图控制的PP-VCtrl视频生成：
+### 3. 人体姿态图控制的视频生成 (Pose)：
 <table class="center">
     <thead>
         <tr>
+            <th>Text</th> <!-- 新增的列标题，在最左边 -->
             <th>Reference</th> <!-- 新增的列标题，在最左边 -->
             <th>Pose Videos</th>
             <th>Ours</th>
@@ -97,11 +94,13 @@ PP-VCtrl 是一个通用的视频生成控制模型，通过引入辅助条件�
     </thead>
     <tbody>
         <tr>
+            <td>A young man with curly hair and a red t-shirt featuring a white logo is seen in various states of motion... </td>  
             <td><img src="assets/figures/pose_case1_reference1.jpg" alt="Reference 1" width="160"></td> 
            <td><img src="assets/figures/pose_case1_control_image.gif" alt="Pose Videos" width="160"></td>
             <td><img src="assets/figures/pose_case1_ours_1.gif" alt="Ours 1" width="160"></td>
         </tr>
         <tr>
+            <td>A woman models an Adrianna Papell women's gown, featuring a sleeveless...</td> 
             <td><img src="assets/figures/pose_case2_reference2.jpg" alt="Reference 1" width="160"></td> 
             <td><img src="assets/figures/pose_case2_control_image.gif" alt="Pose Videos" width="160"></td>
             <td><img src="assets/figures/pose_case2_ours_2.gif" alt="Ours 1" width="160"></td>
@@ -237,15 +236,14 @@ bash scripts/infer_cogvideox_i2v_pose_vctrl.sh
 
 ## 📚 技术细节
 
-<details close>
-<summary>技术扩展</summary>
 
-### 4.1 PP-Vctrl
+
+### 4.1 PP-VCtrl
 在当今数字创意领域，视频生成技术已成为内容创作和叙事表达的重要工具。近期文本到视频的扩散模型虽然实现了自然语言驱动的视频生成，但在控制生成内容的精细时空特征方面仍面临重大挑战。 比如，在在广告创意、影视后期制作、直播带货、虚拟人交互等应用场景下，仅依靠文本接口难以精确指定物体轮廓、人体姿态以及画面背景等视觉特征，这些都需要更精确的控制信号来引导生成过程。目前的创作者往往需要通过反复调整文本描述来接近预期效果，这种试错式的迭代不仅耗时低效，也难以完全满足视频生成中对精确控制的需求，亟需更有效的视频控制方案。
 
 尽管ControlNet在可控图像生成领域取得了突破性进展，但视频生成领域仍缺乏类似的通用控制方案。当前可控视频生成的研究主要集中在开发特定任务的解决方案，如人物动画生成、视频修复和运动控制等。这些方法通常为每个具体任务设计专门的模块，导致技术体系碎片化，缺乏统一的理论框架。同时，它们在处理文本提示和参考帧等基础输入时往往受限于任务特定的设计，难以实现灵活的跨任务迁移。此外，现有的一些方法试图通过控制图像生成模型来生成视频，而不是直接控制视频生成模型，这在时序一致性和整体生成质量上都存在局限。
 
-针对上述挑战，我们提出了PP-VCtrl - 一个统一的视频生成控制框架，它通过引入辅助条件编码器，实现了对各类控制信号的灵活接入和精确控制，同时保持了高效的计算性能。它可以高效地应用在各类视频生成场景，尤其是在人物动画、场景转换、视频编辑等需要精确控制的任务中。
+针对上述挑战，我们提出了PP-VCtrl：一个统一的视频生成控制框架，它通过引入辅助条件编码器，实现了对各类控制信号的灵活接入和精确控制，同时保持了高效的计算性能。它可以高效地应用在各类视频生成场景，尤其是在人物动画、场景转换、视频编辑等需要精确控制的任务中。
 
 ### 4.2 数据策略
 相比于文本/图像-视频生成，可控视频生成的数据除了满足画面质量、文本-视频对齐外，还需要根据不同的可控任务构造不同的数据集。我们通过收集公开视频数据集构建原始数据池，对原始数据进行切分单镜头、去除黑边、水印和字幕后，进行美学质量评分过滤得到可用数据池。基于可用数据池做recaption、人体关节点提取和视频分割，依次满足canny、pose和mask视频编辑任务的数据需求。具体如下图所示：
