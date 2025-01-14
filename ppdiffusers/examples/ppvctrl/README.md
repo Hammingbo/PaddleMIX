@@ -261,11 +261,11 @@ bash scripts/infer_cogvideox_i2v_pose_vctrl.sh
 ### 4.4 定量指标评测
 在边缘控制视频生成（Canny）、人体姿态控制视频生成（Pose）以及蒙版控制视频生成（Mask）三个任务的定量评估中，PPVCtrl模型在控制能力和视频质量指标上均能够媲美或超越现有开源的特定任务方法。
 
-<img src="assets/models/eval_2.png" style="width:100%">
+<img src="assets/models/eval1.png" style="width:100%">
 
 我们进行了人工评估实验，邀请了多位评估者对不同方法生成的视频进行打分，评估维度包括视频整体质量、时序一致性等。结果显示，在所有评估维度上，PPVCtrl的评分均高于现有开源方法。
 
-<img src="assets/models/eval_1.png" style="width:100%">
+<img src="assets/models/eval2.png" style="width:100%">
 </details>
 <!-- 
 ## More version
