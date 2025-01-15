@@ -138,8 +138,10 @@ python -m pip install paddlepaddle-gpu==3.0.0b2 -i https://www.paddlepaddle.org.
 git clone https://github.com/PaddlePaddle/PaddleMIX.git
 ```
 ```bash
-# 安装ppdiffusers
 cd PaddleMIX
+#安装paddlemix
+pip install -e .
+# 安装ppdiffusers
 pip install -e ppdiffusers
 # 安装paddlenlp
 pip install paddlenlp==v3.0.0-beta2
@@ -183,34 +185,34 @@ wget -P weights/poses https://bj.bcebos.com/v1/dataset/PaddleMIX/vctrl/paddle_we
 
 ### 3. 准备预测试数据
 我们已经为你提供了所需的测试案例。
-### 3.1. 上传数据
+#### 3.1. 上传数据
 你也可以将自己准备的视频和视频对应的文本上传至 **/examples** 对应目录下，如下所示：
 ```
 examples/
-├── pose/case-1
+├── canny/case-1
 │   ├── pixels_values.mp4
 │   ├── prompt.txt
 ├── mask/case-1
 │   ├── pixels_values.mp4
 │   ├── prompt.txt
-├── canny/case-1
+├── pose/case-1
 │   ├── pixels_values.mp4
 │   ├── prompt.txt
 ```
 
 ***注意*** : 首先你应该选择合适的任务类型，然后将你的视频和文本上传至 **/examples/pose** 或 **/examples/mask** 或 **/examples/canny** 其中之一，我们的Mask和Canny模型目前只支持分辨率为**720x480**的视频。Pose模型可同时支持分辨率为**720x480**和**480x720**的视频。
 
-### 3.2. 提取控制条件
-我们提供控制条件提取脚本帮助你获得视频生成所需的控制条件。可以根据你所选择的任务执行下面脚本获取相关的控制条件。
+#### 3.2. 提取控制条件
+我们提供控制条件提取脚本帮助你获得视频生成所需的控制条件。根据你所选择的任务执行下面脚本获取相关的控制条件。
 
-#### 3.2.1. 边缘控制条件提取
+##### 3.2.1. 边缘控制条件提取
 ```bash
 #提取边缘控制条件
 bash anchor/extract_canny.sh
 ```
 
 
-#### 3.2.2. 蒙版控制条件提取
+##### 3.2.2. 蒙版控制条件提取
 ```bash
 #下载SAM2模型权重
 wget -P anchor/checkpoint/mask https://bj.bcebos.com/v1/paddlenlp/models/community/Sam/Sam2/sam2.1_hiera_large.pdparams
@@ -218,26 +220,26 @@ wget -P anchor/checkpoint/mask https://bj.bcebos.com/v1/paddlenlp/models/communi
 bash anchor/extract_mask.sh
 ```
 
-***注意*** :你可以通过修改 **scripts/extract_mask.sh** 中的**prompt**，来选择你需要编辑的视频主体。
+***注意*** :你可以通过修改 **anchor/extract_mask.sh** 中的**prompt**，来选择你需要编辑的视频主体。
 
-#### 3.2.3. 人体姿态条件提取
+<!-- ##### 3.2.3. 人体姿态条件提取
 ```bash
 #提取人体姿态控制条件
 bash scripts/extract_pose.sh
-```
-### 3.3. 提取结果
+``` -->
+#### 3.3. 提取结果
 在提取控制条件后，你将得到 **guide_values.mp4** 和 **reference_image.jpg** 在对应的测试案例目录下。mask任务会多生成一个**mask_values.mp4**，如下所示：
 
 ```
 examples/
-├── mask/case-1
+├── canny/case-1
 │   ├── guide_values.mp4
-|   ├── mask_values.mp4
 │   ├── pixels_values.mp4
 │   ├── prompt.txt
 │   └── reference_image.jpg
-├── canny/case-1
+├── mask/case-1
 │   ├── guide_values.mp4
+|   ├── mask_values.mp4
 │   ├── pixels_values.mp4
 │   ├── prompt.txt
 │   └── reference_image.jpg
@@ -312,7 +314,7 @@ bash scripts/infer_cogvideox_i2v_pose_vctrl.sh
 我们进行了人工评估实验，邀请了多位评估者对不同方法生成的视频进行打分，评估维度包括视频整体质量、时序一致性等。结果显示，在所有评估维度上，PPVCtrl的评分均高于现有开源方法。
 
 <img src="assets/models/eval2.png" style="width:100%">
-</details>
+
 <!-- 
 ## More version
 <details close>
