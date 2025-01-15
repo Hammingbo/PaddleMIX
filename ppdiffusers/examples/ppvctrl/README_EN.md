@@ -217,6 +217,7 @@ bash anchor/extract_canny.sh
 
 ```bash
 #download sam2
+mkdir -p anchor/checkpoint/mask
 wget -P anchor/checkpoint/mask https://bj.bcebos.com/v1/paddlenlp/models/community/Sam/Sam2/sam2.1_hiera_large.pdparams
 #mask
 bash anchor/extract_mask.sh
@@ -260,28 +261,31 @@ The final inference results of the model can be found in the **/infer_outputs** 
 ### 1. Generate with Canny Map
 ```bash
 ##i2v
+mkdir -p infer_outputs/canny/i2v
 bash scripts/infer_cogvideox_i2v_canny_vctrl.sh
 
 ##t2v
+mkdir -p infer_outputs/canny/t2v
 bash scripts/infer_cogvideox_t2v_canny_vctrl.sh
 ```
 
 ### 2. Generate with Mask Map
-
 ```bash
-##t2v
-bash scripts/infer_cogvideox_t2v_mask_vctrl.sh
-
 ##i2v
+mkdir -p infer_outputs/mask/i2v
 bash scripts/infer_cogvideox_i2v_mask_vctrl.sh
-```
 
+##t2v
+mkdir -p infer_outputs/mask/t2v
+bash scripts/infer_cogvideox_t2v_mask_vctrl.sh
+```
 **Note**: The edge and mask control models can support both t2v (text-to-video) and i2v (image-to-video) models simultaneously.
 
 ### 3. Generate with Human Pose Map
 
 ```bash
 ##i2v
+mkdir -p infer_outputs/pose/i2v
 bash scripts/infer_cogvideox_i2v_pose_vctrl.sh
 ```
 

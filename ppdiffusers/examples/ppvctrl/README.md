@@ -215,6 +215,7 @@ bash anchor/extract_canny.sh
 ##### 3.2.2. 蒙版控制条件提取
 ```bash
 #下载SAM2模型权重
+mkdir -p anchor/checkpoint/mask
 wget -P anchor/checkpoint/mask https://bj.bcebos.com/v1/paddlenlp/models/community/Sam/Sam2/sam2.1_hiera_large.pdparams
 #提取蒙版控制条件
 bash anchor/extract_mask.sh
@@ -256,24 +257,29 @@ examples/
 ### 1. 通过边缘控制生成视频
 ```bash
 ##i2v
+mkdir -p infer_outputs/canny/i2v
 bash scripts/infer_cogvideox_i2v_canny_vctrl.sh
 
 ##t2v
+mkdir -p infer_outputs/canny/t2v
 bash scripts/infer_cogvideox_t2v_canny_vctrl.sh
 ```
 
 ### 2. 通过蒙版控制生成视频
 ```bash
-##t2v
-bash scripts/infer_cogvideox_t2v_mask_vctrl.sh
-
 ##i2v
+mkdir -p infer_outputs/mask/i2v
 bash scripts/infer_cogvideox_i2v_mask_vctrl.sh
+
+##t2v
+mkdir -p infer_outputs/mask/t2v
+bash scripts/infer_cogvideox_t2v_mask_vctrl.sh
 ```
 ***注意:*** 边缘和蒙版控制模型可以同时支持t2v和i2v模型。 
 ### 3. 通过人物姿态图控制生成视频
 ```bash
 ##i2v
+mkdir -p infer_outputs/pose/i2v
 bash scripts/infer_cogvideox_i2v_pose_vctrl.sh
 ```
 ***注意:*** 人物姿态控制模型只适用于i2v模型。 
