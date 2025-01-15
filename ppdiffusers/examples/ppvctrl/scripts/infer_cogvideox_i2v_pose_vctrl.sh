@@ -19,7 +19,7 @@ python infer_cogvideox_i2v_vctrl_cli.py \
   --control_video_path "examples/pose/case1/guide_values.mp4" \
   --ref_image_path "examples/pose/case1/reference_image.jpg" \
   --output_dir "infer_outputs/pose2video" \
-  --prompt "" \
+  --prompt_path "examples/pose/case1/prompt.txt" \
   --task "pose" \
   --width 480 \
   --height 720 \
