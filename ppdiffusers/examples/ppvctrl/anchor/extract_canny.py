@@ -26,7 +26,7 @@ if __name__=='__main__':
     first_frame = vr[0].asnumpy()
     first_frame_bgr = cv2.cvtColor(first_frame, cv2.COLOR_RGB2BGR)
     cv2.imwrite(args.reference_image_path, first_frame_bgr)
-
+    
     # 逐帧读取视频
     frames = []
     for i in range(len(vr)):
