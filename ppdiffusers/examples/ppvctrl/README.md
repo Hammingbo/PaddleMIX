@@ -227,8 +227,12 @@ bash anchor/extract_mask.sh
 ##### 3.2.2. Extract Human Pose Map
 
 ```bash
+#download detection weights
+wget -P anchor/checkpoints/paddle3.0_hrnet_w48_coco_wholebody_384x288 https://bj.bcebos.com/v1/dataset/PaddleMIX/xiaobin/pose_checkpoint/paddle3.0_hrnet_w48_coco_wholebody_384x288/model.pdiparams
+wget -P anchor/checkpoints/PP-YOLOE_plus-S_infer https://bj.bcebos.com/v1/dataset/PaddleMIX/xiaobin/pose_checkpoint/PP-YOLOE_plus-S_infer/inference.pdiparams
+
 #pose
-bash scripts/extract_pose.sh
+bash anchor/extract_pose.sh
 ```
 
 #### 3.3. Extract Results

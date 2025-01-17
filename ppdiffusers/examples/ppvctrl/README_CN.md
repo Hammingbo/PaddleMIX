@@ -215,7 +215,7 @@ bash anchor/extract_canny.sh
 ##### 3.2.2. 蒙版控制条件提取
 ```bash
 #下载SAM2模型权重
-mkdir -p anchor/checkpoint/mask
+mkdir -p anchor/checkpoints/SAM2
 wget -P anchor/checkpoint/mask https://bj.bcebos.com/v1/paddlenlp/models/community/Sam/Sam2/sam2.1_hiera_large.pdparams
 #提取蒙版控制条件
 bash anchor/extract_mask.sh
@@ -225,6 +225,10 @@ bash anchor/extract_mask.sh
 
 ##### 3.2.3. 人体姿态条件提取
 ```bash
+#下载检测模型权重
+wget -P anchor/checkpoints/paddle3.0_hrnet_w48_coco_wholebody_384x288 https://bj.bcebos.com/v1/dataset/PaddleMIX/xiaobin/pose_checkpoint/paddle3.0_hrnet_w48_coco_wholebody_384x288/model.pdiparams
+wget -P anchor/checkpoints/PP-YOLOE_plus-S_infer https://bj.bcebos.com/v1/dataset/PaddleMIX/xiaobin/pose_checkpoint/PP-YOLOE_plus-S_infer/inference.pdiparams
+
 #提取人体姿态控制条件
 bash anchor/extract_pose.sh
 ```
