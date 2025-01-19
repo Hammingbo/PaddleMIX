@@ -1,4 +1,3 @@
-paddlex==3.0.0b2
 moviepy==1.0.3
 supervision
 hydra-core
