@@ -139,7 +139,9 @@ pip install -e .
 # Install ppdiffusers
 pip install -e ppdiffusers
 # Install paddlenlp
-pip install paddlenlp==v3.0.0-beta2
+pip install paddlenlp==v3.0.0-beta1
+# Install paddlex
+pip install paddlex==3.0.0b2
 # vctrl folder
 cd ppdiffusers/examples/vctrl
 # Install other required dependencies.
