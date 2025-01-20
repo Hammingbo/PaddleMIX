@@ -11,6 +11,7 @@ These design features make PP-VCtrl suitable for a wide range of video generatio
 ## 📰 News
 
 `[2025-01-09]`:🎉 Release PP-Vctrl inference code and PP-Vctrl-5B-v1 model weights. 
+
 `[2025-01-08]`:🎉 Release PP-Vctrl: a plug-and-play module turning  text-to-video models into custom video generators. 
 
 
@@ -298,6 +299,14 @@ bash scripts/infer_cogvideox_i2v_pose_vctrl.sh
 ### 4. Gradio
 
 We have also created a Gradio application for you to interact with our model.
+
+**Application**：
+
+Generate with Canny Map：https://aistudio.baidu.com/application/detail/63852
+
+Generate with Mask Map：https://aistudio.baidu.com/application/detail/63854
+
+
 
 ## 📚 Technical Details
 

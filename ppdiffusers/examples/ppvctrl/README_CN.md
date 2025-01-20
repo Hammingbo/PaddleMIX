@@ -16,6 +16,7 @@
 <!-- ***注意:***  -->
 ## 📰 新闻
 `[2025-01-09]`:🎉 发布PP-VCtrl推理代码和PP-VCtrl-5b-v1模型权重。
+
  `[2025-01-08]`:🎉发布 PP-VCtrl：一个即插即用模块，将文本到视频模型转变为定制的视频生成器。
 
 ## 🚩 **TODO/最新进展**
@@ -291,6 +292,13 @@ bash scripts/infer_cogvideox_i2v_pose_vctrl.sh
 ***注意:*** 人物姿态控制模型只适用于i2v模型。 
 ### 4. Gradio 应用
 我们还创建了一个 Gradio 应用，供您与我们的模型进行交互。
+
+**应用体验**：
+
+基于边缘控制的场景转换：https://aistudio.baidu.com/application/detail/63852
+
+基于蒙版控制的视频编辑：https://aistudio.baidu.com/application/detail/63854
+
 <!-- ```
 ```
 <img src="asserts/figs/gradio.jpg" style="width:70%"> -->
