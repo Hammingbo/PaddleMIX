@@ -145,6 +145,8 @@ pip install paddlenlp==v3.0.0-beta2
 cd ppdiffusers/examples/vctrl
 # Install other required dependencies.
 pip install -r requirements.txt
+# Install paddlex
+pip install paddlex==3.0.0b2
 ```
 
 ### 2. Download the PP-VCtrl weights
