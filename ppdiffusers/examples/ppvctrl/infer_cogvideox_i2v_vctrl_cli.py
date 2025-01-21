@@ -187,7 +187,7 @@ if __name__ == "__main__":
         )
     else:
         pipeline = CogVideoXVCtrlImageToVideoPipeline.from_pretrained(
-            args.pretrained_model_name_or_path, vctrl=vctrl, paddle_dtype=paddle.float16,low_cpu_mem_usage=True
+            args.pretrained_model_name_or_path, vctrl=vctrl, paddle_dtype=paddle.float16,low_cpu_mem_usage=True, map_location="cpu",
         )
 
     pipeline.scheduler = CogVideoXDDIMScheduler.from_config(pipeline.scheduler.config, timestep_spacing="trailing")
