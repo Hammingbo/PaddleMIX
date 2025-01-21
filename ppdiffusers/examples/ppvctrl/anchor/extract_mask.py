@@ -12,7 +12,6 @@ from PIL import Image
 from paddlemix.models.groundingdino.modeling import GroundingDinoModel
 from paddlemix.processors.groundingdino_processing import GroundingDinoProcessor
 
-
 current_dir = os.getcwd()
 paddlemix_dir = os.path.abspath(os.path.join(current_dir, '../../..'))
 
