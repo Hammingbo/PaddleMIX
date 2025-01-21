@@ -145,13 +145,17 @@ pip install -e .
 # 安装ppdiffusers
 pip install -e ppdiffusers
 # 安装paddlenlp
-pip install paddlenlp==v3.0.0-beta1
-# 安装paddlex
-pip install paddlex==3.0.0b2
+
+pip install paddlenlp==v3.0.0-beta2
+
 # 进入 vctrl目录
 cd ppdiffusers/examples/ppvctrl
 # 安装其他所需的依赖
 pip install -r requirements.txt
+
+#安装paddlex
+pip install paddlex==3.0.0b2
+
 ```
 ### 2. 下载预训练权重
 请按照如下方式下载权重：
@@ -219,7 +223,9 @@ bash anchor/extract_canny.sh
 ```bash
 #下载SAM2模型权重
 mkdir -p anchor/checkpoints/SAM2
-wget -P anchor/checkpoint/SAM2 https://bj.bcebos.com/v1/paddlenlp/models/community/Sam/Sam2/sam2.1_hiera_large.pdparams
+
+wget -P anchor/checkpoint/mask https://bj.bcebos.com/v1/paddlenlp/models/community/Sam/Sam2/sam2.1_hiera_large.pdparams
+
 #提取蒙版控制条件
 bash anchor/extract_mask.sh
 ```
@@ -293,11 +299,11 @@ bash scripts/infer_cogvideox_i2v_pose_vctrl.sh
 ### 4. Gradio 应用
 我们还创建了一个 Gradio 应用，供您与我们的模型进行交互。
 
-**应用体验**：
 
-基于边缘控制的场景转换：https://aistudio.baidu.com/application/detail/63852
+**基于边缘控制的场景转换:** https://aistudio.baidu.com/application/detail/63852
 
-基于蒙版控制的视频编辑：https://aistudio.baidu.com/application/detail/63854
+**基于蒙版控制的视频编辑:** https://aistudio.baidu.com/application/detail/63854
+
 
 <!-- ```
 ```

@@ -140,13 +140,17 @@ pip install -e .
 # Install ppdiffusers
 pip install -e ppdiffusers
 # Install paddlenlp
+
 pip install paddlenlp==v3.0.0-beta1
 # Install paddlex
 pip install paddlex==3.0.0b2
+
 # vctrl folder
 cd ppdiffusers/examples/vctrl
 # Install other required dependencies.
 pip install -r requirements.txt
+# Install paddlex
+pip install paddlex==3.0.0b2
 ```
 
 ### 2. Download the PP-VCtrl weights
@@ -263,6 +267,7 @@ examples/
 
 ## 🔥 Inference and Generation
 
+
 The final inference results of the model can be found in the **/infer_outputs** directory.
 
 ### 1. Generate with Canny Map
@@ -296,17 +301,42 @@ mkdir -p infer_outputs/pose/i2v
 bash scripts/infer_cogvideox_i2v_pose_vctrl.sh
 ```
 
+
+***注意:*** 人物姿态控制模型只适用于i2v模型。 
+
+#### 3.3 Gradio 应用
+我们还创建了一个 Gradio 应用，供您与我们的模型进行交互。
+
+配置环境&下载权重
+```bash
+pip install decord
+pip install gradio
+pip install pycocoevalcap
+
+mkdir -p weights/sam2/
+wget -P weights/sam2/ https://bj.bcebos.com/v1/paddlenlp/models/community/Sam/Sam2/sam2.1_hiera_large.pdparams
+```
+使用canny任务gradio
+```bash
+python gradios/gradio_canny2video.py
+```
+使用mask任务gradio
+```bash
+python gradios/gradio_mask2video.py
+```
+
+<!-- ```
+```
+<img src="asserts/figs/gradio.jpg" style="width:70%"> -->
+
+
 ### 4. Gradio
 
 We have also created a Gradio application for you to interact with our model.
 
-**Application**：
+**Generate with Canny Map:** https://aistudio.baidu.com/application/detail/63852
 
-Generate with Canny Map：https://aistudio.baidu.com/application/detail/63852
-
-Generate with Mask Map：https://aistudio.baidu.com/application/detail/63854
-
-
+**Generate with Mask Map:** https://aistudio.baidu.com/application/detail/63854
 
 ## 📚 Technical Details
 
