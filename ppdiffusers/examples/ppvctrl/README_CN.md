@@ -152,7 +152,6 @@ pip install paddlenlp==v3.0.0-beta2
 cd ppdiffusers/examples/ppvctrl
 # 安装其他所需的依赖
 pip install -r requirements.txt
-
 #安装paddlex
 pip install paddlex==3.0.0b2
 
