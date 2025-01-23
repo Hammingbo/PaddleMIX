@@ -173,7 +173,7 @@ if __name__ == "__main__":
         vctrl = VCtrlModel.from_config(args.vctrl_config)
     else:
         vctrl = VCtrlModel.from_pretrained(
-            args.pretrained_model_name_or_path, subfolder="vctrl", low_cpu_mem_usage=True
+            args.vctrl_path,  low_cpu_mem_usage=True,paddle_dtype=paddle.float16
         )
 
     if args.transformer_path:
@@ -207,19 +207,4 @@ if __name__ == "__main__":
 
     video = pipeline(
         prompt=prompt,
-        num_inference_steps=args.num_inference_steps,
-        num_frames=num_frames,
-        guidance_scale=args.guidance_scale,
-        generator=paddle.Generator().manual_seed(42),
-        conditioning_frames=validation_control_images[:num_frames],
-        conditioning_frame_indices=list(range(num_frames)),
-        conditioning_scale=args.conditioning_scale,
-        width=args.width,
-        height=args.height,
-        task=args.task,
-        conditioning_masks=validation_mask_images[:num_frames] if args.task == "mask" else None,
-        vctrl_layout_type=args.vctrl_layout_type,
-    ).frames[0]
-
-    final_result.append(video)
-    save_vid_side_by_side(final_result, validation_control_images[:num_frames], args.output_dir, fps=args.fps)
+   
