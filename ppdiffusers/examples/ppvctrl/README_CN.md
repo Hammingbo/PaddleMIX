@@ -221,9 +221,9 @@ bash anchor/extract_canny.sh
 ##### 3.2.2. 蒙版控制条件提取
 ```bash
 #下载SAM2模型权重
-mkdir -p anchor/checkpoints/SAM2
+mkdir -p anchor/checkpoints/mask
 
-wget -P anchor/checkpoint/mask https://bj.bcebos.com/v1/paddlenlp/models/community/Sam/Sam2/sam2.1_hiera_large.pdparams
+wget -P anchor/checkpoints/mask https://bj.bcebos.com/v1/paddlenlp/models/community/Sam/Sam2/sam2.1_hiera_large.pdparams
 
 #提取蒙版控制条件
 bash anchor/extract_mask.sh
@@ -295,6 +295,7 @@ mkdir -p infer_outputs/pose/i2v
 bash scripts/infer_cogvideox_i2v_pose_vctrl.sh
 ```
 ***注意:*** 人物姿态控制模型只适用于i2v模型。 
+
 ### 4. Gradio 应用
 我们还创建了一个 Gradio 应用，供您与我们的模型进行交互。
 
@@ -303,6 +304,23 @@ bash scripts/infer_cogvideox_i2v_pose_vctrl.sh
 
 **基于蒙版控制的视频编辑:** https://aistudio.baidu.com/application/detail/63854
 
+#### Gradio 环境搭建
+```bash
+pip install decord
+pip install gradio
+pip install pycocoevalcap
+
+mkdir -p weights/sam2/
+wget -P weights/sam2/ https://bj.bcebos.com/v1/paddlenlp/models/community/Sam/Sam2/sam2.1_hiera_large.pdparams
+```
+##### 1.1. 使用canny任务gradio
+```bash
+python gradios/gradio_canny2video.py
+```
+##### 1.2. 使用mask任务gradio
+```bash
+python gradios/gradio_mask2video.py
+```
 
 <!-- ```
 ```

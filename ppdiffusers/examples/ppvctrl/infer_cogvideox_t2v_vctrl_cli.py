@@ -173,7 +173,7 @@ if __name__ == "__main__":
         vctrl = VCtrlModel.from_config(args.vctrl_config)
     else:
         vctrl = VCtrlModel.from_pretrained(
-            args.pretrained_model_name_or_path, subfolder="vctrl", low_cpu_mem_usage=True
+            args.vctrl_path, low_cpu_mem_usage=True,paddle_dtype=paddle.float16
         )
 
     if args.transformer_path:

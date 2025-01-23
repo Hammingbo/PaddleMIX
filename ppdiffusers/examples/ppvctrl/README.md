@@ -300,29 +300,10 @@ bash scripts/infer_cogvideox_t2v_mask_vctrl.sh
 mkdir -p infer_outputs/pose/i2v
 bash scripts/infer_cogvideox_i2v_pose_vctrl.sh
 ```
+**Note**: The pose control models only for i2v (image-to-video) models .
 
 
 
-#### 3.3 Gradio 应用
-我们还创建了一个 Gradio 应用，供您与我们的模型进行交互。
-
-配置环境&下载权重
-```bash
-pip install decord
-pip install gradio
-pip install pycocoevalcap
-
-mkdir -p weights/sam2/
-wget -P weights/sam2/ https://bj.bcebos.com/v1/paddlenlp/models/community/Sam/Sam2/sam2.1_hiera_large.pdparams
-```
-使用canny任务gradio
-```bash
-python gradios/gradio_canny2video.py
-```
-使用mask任务gradio
-```bash
-python gradios/gradio_mask2video.py
-```
 
 <!-- ```
 ```
@@ -336,6 +317,25 @@ We have also created a Gradio application for you to interact with our model.
 **Generate with Canny Map:** https://aistudio.baidu.com/application/detail/63852
 
 **Generate with Mask Map:** https://aistudio.baidu.com/application/detail/63854
+
+#### 1. Gradio Environment Setup 
+```bash
+pip install decord
+pip install gradio
+pip install pycocoevalcap
+
+mkdir -p weights/sam2/
+wget -P weights/sam2/ https://bj.bcebos.com/v1/paddlenlp/models/community/Sam/Sam2/sam2.1_hiera_large.pdparams
+```
+##### 1.1. canny on gradio
+```bash
+python gradios/gradio_canny2video.py
+```
+##### 1.2. mask on gradio
+```bash
+python gradios/gradio_mask2video.py
+```
+
 
 ## 📚 Technical Details
 
