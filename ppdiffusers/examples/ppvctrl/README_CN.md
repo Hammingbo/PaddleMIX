@@ -28,6 +28,8 @@
 ## 📷 快速展示
 ### PP-VCtrl-5B-I2V 生成的精彩演示 
 第一行展示的是原始视频，第一列展示的是由[flux.1-dev](https://huggingface.co/black-forest-labs/FLUX.1-dev).生成的视频首帧。获取到首帧后，我们利用自研的 PP-VCtrl-5B-I2V 生成了精彩的视频。
+
+### 边缘控制I2V
 <p align="center">
   <img src="assets/demos/canny/canny_case1_guide.gif" width="192" />
   <img src="assets/demos/canny/canny_case1_pixel.gif" width="192" />
@@ -55,6 +57,8 @@
 </p>
 
 
+
+### 蒙版控制I2V
 <p align="center">
   <img src="assets/demos/mask/mask_case1_guide.gif" width="192" />
   <img src="assets/demos/mask/mask_case1_value.gif" width="192" />
