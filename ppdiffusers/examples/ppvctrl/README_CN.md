@@ -29,56 +29,57 @@
 ### PP-VCtrl-5B-I2V 生成的精彩演示 
 第一行展示的是原始视频，第一列展示的是由[flux.1-dev](https://huggingface.co/black-forest-labs/FLUX.1-dev).生成的视频首帧。获取到首帧后，我们利用自研的 PP-VCtrl-5B-I2V 生成了精彩的视频。
 <p align="center">
-  <img src="assets/demos/canny/canny_case1_guide.gif" width="256" />
-  <img src="assets/demos/canny/canny_case1_pixel.gif" width="256" />
-  <img src="assets/demos/canny/canny_case2_guide.gif" width="256" />
-  <img src="assets/demos/canny/canny_case2_pixel.gif" width="256" />
+  <img src="assets/demos/canny/canny_case1_guide.gif" width="192" />
+  <img src="assets/demos/canny/canny_case1_pixel.gif" width="192" />
+  <img src="assets/demos/canny/canny_case2_guide.gif" width="192" />
+  <img src="assets/demos/canny/canny_case2_pixel.gif" width="192" />
 </p>
 <p align="center">
-  <img src="assets/demos/canny/canny_case1_sub1.jpg" width="256" />
-  <img src="assets/demos/canny/canny_case1_sub1.gif" width="256" />
-  <img src="assets/demos/canny/canny_case2_sub1.jpg" width="256" />
-  <img src="assets/demos/canny/canny_case2_sub1.gif" width="256" />
+  <img src="assets/demos/canny/canny_case1_sub1.jpg" width="192" />
+  <img src="assets/demos/canny/canny_case1_sub1.gif" width="192" />
+  <img src="assets/demos/canny/canny_case2_sub1.jpg" width="192" />
+  <img src="assets/demos/canny/canny_case2_sub1.gif" width="192" />
 </p>
 <p align="center">
-  <img src="assets/demos/canny/canny_case1_sub2.jpg" width="256" />
-  <img src="assets/demos/canny/canny_case1_sub2.gif" width="256" />
-  <img src="assets/demos/canny/canny_case2_sub2.jpg" width="256" />
-  <img src="assets/demos/canny/canny_case2_sub2.gif" width="256" />
+  <img src="assets/demos/canny/canny_case1_sub2.jpg" width="192" />
+  <img src="assets/demos/canny/canny_case1_sub2.gif" width="192" />
+  <img src="assets/demos/canny/canny_case2_sub2.jpg" width="192" />
+  <img src="assets/demos/canny/canny_case2_sub2.gif" width="192" />
 </p>
 
 <p align="center">
-  <img src="assets/demos/canny/canny_case1_sub3.jpg" width="256" />
-  <img src="assets/demos/canny/canny_case1_sub3.gif" width="256" />
-  <img src="assets/demos/canny/canny_case2_sub3.jpg" width="256" />
-  <img src="assets/demos/canny/canny_case2_sub3.gif" width="256" />
+  <img src="assets/demos/canny/canny_case1_sub3.jpg" width="192" />
+  <img src="assets/demos/canny/canny_case1_sub3.gif" width="192" />
+  <img src="assets/demos/canny/canny_case2_sub3.jpg" width="192" />
+  <img src="assets/demos/canny/canny_case2_sub3.gif" width="192" />
 </p>
 
 
 <p align="center">
-  <img src="assets/demos/mask/mask_case1_guide.gif" width="256" />
-  <img src="assets/demos/mask/mask_case1_value.gif" width="256" />
-  <img src="assets/demos/mask/mask_case2_guide.gif" width="256" />
-  <img src="assets/demos/mask/mask_case2_value.gif" width="256" />
+  <img src="assets/demos/mask/mask_case1_guide.gif" width="192" />
+  <img src="assets/demos/mask/mask_case1_value.gif" width="192" />
+  <img src="assets/demos/mask/mask_case2_guide.gif" width="192" />
+  <img src="assets/demos/mask/mask_case2_value.gif" width="192" />
 </p>
 <p align="center">
-  <img src="assets/demos/mask/mask_case1_sub1.png" width="256" />
-  <img src="assets/demos/mask/mask_case1_sub1.gif" width="256" />
-  <img src="assets/demos/mask/mask_case2_sub1.png" width="256" />
-  <img src="assets/demos/mask/mask_case2_sub1.gif" width="256" />
+  <img src="assets/demos/mask/mask_case1_sub1.png" width="192" />
+  <img src="assets/demos/mask/mask_case1_sub1.gif" width="192" />
+  <img src="assets/demos/mask/mask_case2_sub1.png" width="192" />
+  <img src="assets/demos/mask/mask_case2_sub1.gif" width="192" />
 </p>
 <p align="center">
-  <img src="assets/demos/mask/mask_case1_sub2.png" width="256" />
-  <img src="assets/demos/mask/mask_case1_sub2.gif" width="256" />
-  <img src="assets/demos/mask/mask_case2_sub2.png" width="256" />
-  <img src="assets/demos/mask/mask_case2_sub2.gif" width="256" />
+  <img src="assets/demos/mask/mask_case1_sub2.png" width="192" />
+  <img src="assets/demos/mask/mask_case1_sub2.gif" width="192" />
+  <img src="assets/demos/mask/mask_case2_sub2.png" width="192" />
+  <img src="assets/demos/mask/mask_case2_sub2.gif" width="192" />
 </p>
 <p align="center">
-  <img src="assets/demos/mask/mask_case1_sub3.png" width="256" />
-  <img src="assets/demos/mask/mask_case1_sub3.gif" width="256" />
-  <img src="assets/demos/mask/mask_case2_sub3.png" width="256" />
-  <img src="assets/demos/mask/mask_case2_sub3.gif" width="256" />
+  <img src="assets/demos/mask/mask_case1_sub3.png" width="192" />
+  <img src="assets/demos/mask/mask_case1_sub3.gif" width="192" />
+  <img src="assets/demos/mask/mask_case2_sub3.png" width="192" />
+  <img src="assets/demos/mask/mask_case2_sub3.gif" width="192" />
 </p>
+
 
 ### 1. 边缘控制的视频生成 (Canny)：
 <table class="center">
