@@ -220,8 +220,8 @@ bash anchor/extract_canny.sh
 
 ```bash
 #download sam2
-mkdir -p anchor/checkpoint/mask
-wget -P anchor/checkpoint/mask https://bj.bcebos.com/v1/paddlenlp/models/community/Sam/Sam2/sam2.1_hiera_large.pdparams
+mkdir -p anchor/checkpoints/mask
+wget -P anchor/checkpoints/mask https://bj.bcebos.com/v1/paddlenlp/models/community/Sam/Sam2/sam2.1_hiera_large.pdparams
 #mask
 bash anchor/extract_mask.sh
 ```

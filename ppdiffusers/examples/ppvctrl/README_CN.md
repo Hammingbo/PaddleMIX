@@ -218,8 +218,8 @@ bash anchor/extract_canny.sh
 ##### 3.2.2. 蒙版控制条件提取
 ```bash
 #下载SAM2模型权重
-mkdir -p anchor/checkpoints/SAM2
-wget -P anchor/checkpoint/mask https://bj.bcebos.com/v1/paddlenlp/models/community/Sam/Sam2/sam2.1_hiera_large.pdparams
+mkdir -p anchor/checkpoints/mask
+wget -P anchor/checkpoints/mask https://bj.bcebos.com/v1/paddlenlp/models/community/Sam/Sam2/sam2.1_hiera_large.pdparams
 #提取蒙版控制条件
 bash anchor/extract_mask.sh
 ```
@@ -343,4 +343,4 @@ python gradios/gradio_mask2video.py
 
 针对不同任务特点，我们设计了相应的优化策略。在边缘控制任务中，采用动态阈值采样增加数据多样性；对于人体姿态控制任务，针对横竖版视频分别采用填充和裁剪的预处理策略；在蒙版控制任务中，我们采用基于区域面积权重的多目标采样方法，根据概率分布动态选择目标区域，并支持区域扩展和多目标联合控制，同时通过随机概率的膨胀处理来增强模型鲁棒性，使生成结果更加自然。这些策略在统一的视频生成控制框架基础上进行综合运用，显著提升了模型在各类场景下的适应能力和生成质量，并充分发挥了PP-VCtrl通用控制框架的优势。
 ### 4. 定量指标评测
-在边缘控制视频生成（Canny�
+在边缘控制视频生成（Canny�
