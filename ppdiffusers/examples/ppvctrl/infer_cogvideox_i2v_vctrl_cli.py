@@ -173,7 +173,7 @@ if __name__ == "__main__":
         vctrl = VCtrlModel.from_config(args.vctrl_config)
     else:
         vctrl = VCtrlModel.from_pretrained(
-            args.vctrl_path, subfolder="vctrl", low_cpu_mem_usage=True, paddle_dtype=paddle.float16
+            args.vctrl_path, low_cpu_mem_usage=True, paddle_dtype=paddle.float16
         )
     if args.transformer_path:
         transformer = CogVideoXTransformer3DVCtrlModel.from_pretrained(
