@@ -29,7 +29,7 @@
 ### PP-VCtr-I2V 生成的精彩演示 
 首先对源视频提取视频控制序列（边缘，蒙版，姿态）。然后利用ControlNet重新制作视频首帧。将视频控制序列和重新制作的视频首帧输入PP-VCtrl-I2V中生成新的视频。
 
-### 边缘控制PPVCtrl-I2V
+### 1.边缘控制PPVCtrl-I2V
 | Input Video               | Control Video               | Reference      Image      | Output  Video             |
 |----------------------|-----------------------|----------------------|-----------------------|
 <img src="https://raw.githubusercontent.com/Hammingbo/Hammingbo.github.io/refs/heads/main/static/gif/canny/canny_case1_pixel.gif" >|<img src="https://raw.githubusercontent.com/Hammingbo/Hammingbo.github.io/refs/heads/main/static/gif/canny/canny_case1_guide.gif"> </img>|<img src="https://raw.githubusercontent.com/Hammingbo/Hammingbo.github.io/refs/heads/main/static/gif/canny/canny_case1_sub1.jpg">|<img src="https://raw.githubusercontent.com/Hammingbo/Hammingbo.github.io/refs/heads/main/static/gif/canny/canny_case1_sub1.gif" > </img>|
@@ -37,13 +37,13 @@
 
 
 
-### 蒙版控制PPVCtrl-I2V
+### 2. 蒙版控制PPVCtrl-I2V
 | Input Video               | Control Video               | Reference      Image      | Output  Video             |
 |----------------------|-----------------------|----------------------|-----------------------|
 <img src="https://raw.githubusercontent.com/Hammingbo/Hammingbo.github.io/refs/heads/main/static/gif/mask/mask_case1_pixel.gif" >|<img src="https://raw.githubusercontent.com/Hammingbo/Hammingbo.github.io/refs/heads/main/static/gif/mask/mask_case1_guide.gif"> </img>|<img src="https://raw.githubusercontent.com/Hammingbo/Hammingbo.github.io/refs/heads/main/static/gif/mask/mask_case1_sub1.jpg">|<img src="https://raw.githubusercontent.com/Hammingbo/Hammingbo.github.io/refs/heads/main/static/gif/mask/mask_case1_sub1.gif" > </img>|
 <img src="https://raw.githubusercontent.com/Hammingbo/Hammingbo.github.io/refs/heads/main/static/gif/mask/mask_case2_pixel.gif" >|<img src="https://raw.githubusercontent.com/Hammingbo/Hammingbo.github.io/refs/heads/main/static/gif/mask/mask_case2_guide.gif"> </img>|<img src="https://raw.githubusercontent.com/Hammingbo/Hammingbo.github.io/refs/heads/main/static/gif/mask/mask_case2_sub2.jpg">|<img src="https://raw.githubusercontent.com/Hammingbo/Hammingbo.github.io/refs/heads/main/static/gif/mask/mask_case2_sub2.gif" > </img>|
 
-### 姿态控制PPVCtrl-I2V
+### 3. 姿态控制PPVCtrl-I2V
 | Input Video               | Control Video               | Reference      Image      | Output  Video             |
 |----------------------|-----------------------|----------------------|-----------------------|
 <img src="https://raw.githubusercontent.com/Hammingbo/Hammingbo.github.io/refs/heads/main/static/gif/pose/pose_case1_pixel.gif" >|<img src="https://raw.githubusercontent.com/Hammingbo/Hammingbo.github.io/refs/heads/main/static/gif/pose/pose_case1_guide.gif"> </img>|<img src="https://raw.githubusercontent.com/Hammingbo/Hammingbo.github.io/refs/heads/main/static/gif/pose/pose_case1_sub1.jpg">|<img src="https://raw.githubusercontent.com/Hammingbo/Hammingbo.github.io/refs/heads/main/static/gif/pose/pose_case1_sub1.gif" > </img>|
@@ -52,94 +52,9 @@
 
 
 
-### 1. 边缘控制的视频生成 (Canny)：
-<table class="center">
-    <thead>
-        <tr>
-            <th>Prompt</th> <!-- 新增的列标题，在最左边 -->
-            <th>Reference Image</th>
-            <th>Control Videos</th>
-            <th>Ours (PP-VCtrl-5B-T2V)</th>
-            <th>Ours (PP-VCtrl-5B-I2V)</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Group of fishes swimming in aquarium.</td> <!-- 新增的文本描述，在最左边 -->
-            <td><img src="assets/figures/canny_case1_reference.jpg" alt="Reference " width="160"></td>
-            <td><img src="assets/figures/canny_case1_control_image.gif" alt="Conrotl Videos" width="160"></td>
-            <td><img src="assets/figures/canny_case1_ours_t2v.gif" alt="Ours T2V" width="160"></td>
-            <td><img src="assets/figures/canny_case1_ours_i2v.gif" alt="Ours I2V" width="160"></td>
-        </tr>
-        <tr>
-            <td>A boat with a flag on it is sailing on the sea.</td> <!-- 第二行的文本描述 -->
-            <td><img src="assets/figures/canny_case2_reference.jpg" alt="Reference" width="160"></td>
-            <td><img src="assets/figures/canny_case2_control_image.gif" alt="Control Videos" width="160"></td>
-            <td><img src="assets/figures/canny_case2_ours_t2v.gif" alt="Ours T2v" width="160"></td>
-            <td><img src="assets/figures/canny_case2_ours_i2v.gif" alt="Ours I2v" width="160"></td>
-        </tr>
-        <!-- 可以继续添加更多行 -->
-    </tbody>
-</table>
 
 
 
-### 2. 蒙版控制的视频生成 (Mask)：
-<table class="center">
-    <thead>
-        <tr>
-            <th>Prompt</th> <!-- 新增的列标题，在最左边 -->
-            <th>Reference Image</th>
-            <th>Control Videos</th>
-            <th>Ours (PP-VCtrl-5B-T2V)</th>
-            <th>Ours (PP-VCtrl-5B-I2V)</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>A rider in a dark helmet and white breeches is atop a chestnut horse...</td> <!-- 新增的文本描述，在最左边 -->
-            <td><img src="assets/figures/mask_case1_reference.jpg" alt="Reference " width="160"></td>
-            <td><img src="assets/figures/mask_case1_control_image.gif" alt="Conrotl Videos" width="160"></td>
-            <td><img src="assets/figures/mask_case1_ours_t2v.gif" alt="Ours T2V" width="160"></td>
-            <td><img src="assets/figures/mask_case1_ours_i2v.gif" alt="Ours I2V" width="160"></td>
-        </tr>
-        <tr>
-            <td>A dark gray Mini Cooper is parked on a city street...</td> <!-- 第二行的文本描述 -->
-            <td><img src="assets/figures/mask_case2_reference.jpg" alt="Reference" width="160"></td>
-            <td><img src="assets/figures/mask_case2_control_image.gif" alt="Control Videos" width="160"></td>
-            <td><img src="assets/figures/mask_case2_ours_t2v.gif" alt="Ours T2v" width="160"></td>
-            <td><img src="assets/figures/mask_case2_ours_i2v.gif" alt="Ours I2v" width="160"></td>
-        </tr>
-        <!-- 可以继续添加更多行 -->
-    </tbody>
-</table>
-
-### 3. 人体姿态图控制的视频生成 (Pose)：
-<table class="center">
-    <thead>
-        <tr>
-            <th>Prompt</th> <!-- 新增的列标题，在最左边 -->
-            <th>Reference Image</th> <!-- 新增的列标题，在最左边 -->
-            <th>Control Videos</th>
-            <th>Ours (PP-VCtrl-5B-I2V)</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>A young man with curly hair and a red t-shirt featuring a white logo is seen in various states of motion... </td>  
-            <td><img src="assets/figures/pose_case1_reference1.jpg" alt="Reference 1" width="200"></td> 
-           <td><img src="assets/figures/pose_case1_control_image.gif" alt="Pose Videos" width="160"></td>
-            <td><img src="assets/figures/pose_case1_ours_1.gif" alt="Ours 1" width="160"></td>
-        </tr>
-        <tr>
-            <td>A woman models an Adrianna Papell women's gown, featuring a sleeveless...</td> 
-            <td><img src="assets/figures/pose_case2_reference2.jpg" alt="Reference 1" width="200"></td> 
-            <td><img src="assets/figures/pose_case2_control_image.gif" alt="Pose Videos" width="160"></td>
-            <td><img src="assets/figures/pose_case2_ours_2.gif" alt="Ours 1" width="160"></td>
-        </tr>
-        <!-- 可以继续添加更多行 -->
-    </tbody>
-</table>
     
 
 
