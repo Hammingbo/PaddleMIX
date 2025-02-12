@@ -14,12 +14,12 @@
 
 python infer_cogvideox_i2v_vctrl_cli.py \
   --pretrained_model_name_or_path "paddlemix/cogvideox-5b-i2v-vctrl" \
-  --vctrl_path "/root/paddlejob/workspace/env_run/output/haoming/fork/model_weights/PP-VCtrl-Canny-i2v/v2" \
+  --vctrl_path "paddlemix/vctrl-5b-i2v-canny-v2" \
   --vctrl_config "vctrl_configs/cogvideox_5b_i2v_vctrl_tiny_config.json" \
-  --control_video_path "examples/canny/case4/guide_values.mp4" \
-  --ref_image_path "examples/canny/case4/reference_image.jpg" \
+  --control_video_path "examples/canny/case1/guide_values.mp4" \
+  --ref_image_path "examples/canny/case1/reference_image.jpg" \
   --output_dir "infer_outputs/canny2video/i2v" \
-  --prompt_path "examples/canny/case4/prompt.txt" \
+  --prompt_path "examples/canny/case1/prompt.txt" \
   --task "canny" \
   --width 720 \
   --height 480 \

@@ -25,14 +25,15 @@ These design features make PP-VCtrl suitable for a wide range of video generatio
 First, extract the video control sequences (edges, masks, and poses) from the source video. Then, use ControlNet to regenerate the first frame of the video. Input the video control sequences and the newly generated first frame into PP-VCtrl-I2V to generate the new video.
 
 ### PP-VCtrl-I2V-Canny
-<video src="assets/demos/canny/canny_case1.mp4" width="720" controls></video>
+<video width="100%" height="auto" style="display: block; margin: 0px auto;" controls autoplay loop src="https://hammingbo.github.io/static/videos/canny_full_size.mp4" muted="false"></video>
+
 
 ### PP-VCtrl-I2V-Mask
-<video src="assets/demos/mask/mask_case1.mp4" width="720" controls></video>
+<video width="100%" height="auto" style="display: block; margin: 0px auto;" controls autoplay loop src="https://hammingbo.github.io/static/videos/mask_full_size.mp4" muted="false"></video>
 
-### PP-VCtrl-I2V-Pose
+<!-- ### PP-VCtrl-I2V-Pose
 
-<video src="assets/demos/pose/pose_case2.mp4" width="720" controls></video>
+<video src="assets/demos/pose/pose_case2.mp4" width="720" controls></video> -->
 
 
 

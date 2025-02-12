@@ -14,17 +14,17 @@
 
 python infer_cogvideox_i2v_vctrl_cli.py \
   --pretrained_model_name_or_path "paddlemix/cogvideox-5b-i2v-vctrl" \
-  --vctrl_path "/root/paddlejob/workspace/env_run/output/haoming/fork/model_weights/PP-VCtrl-Mask-i2v/v2" \
+  --vctrl_path "paddlemix/vctrl-5b-i2v-mask-v2" \
   --vctrl_config "vctrl_configs/cogvideox_5b_i2v_vctrl_config.json" \
-  --control_video_path "examples/mask/case4/guide_values.mp4" \
-  --ref_image_path "examples/mask/case4/reference_image.png" \
-  --control_mask_video_path 'examples/mask/case4/mask_values.mp4' \
+  --control_video_path "examples/mask/case1/guide_values.mp4" \
+  --ref_image_path "examples/mask/case1/reference_image.jpg" \
+  --control_mask_video_path 'examples/mask/case1/mask_values.mp4' \
   --output_dir "infer_outputs/mask2video/i2v" \
-  --prompt_path "examples/mask/case4/prompt.txt" \
+  --prompt_path "examples/mask/case1/prompt.txt" \
   --task "mask" \
   --width 720 \
   --height 480 \
   --max_frame 49 \
   --guidance_scale 3.5 \
   --num_inference_steps 25 \
-  --vctrl_layout_type spacing
+  --vctrl_layout_type spacing 

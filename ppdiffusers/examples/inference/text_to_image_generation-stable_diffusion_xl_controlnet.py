@@ -1,3 +1,5 @@
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
 # Copyright (c) 2023 PaddlePaddle Authors. All Rights Reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -23,14 +25,15 @@ from ppdiffusers import (
     StableDiffusionXLControlNetPipeline,
 )
 from ppdiffusers.utils import load_image
-prompt = " anime artwork {prompt} . anime style,  a panda walk through a snowy winter landscape, traversing a bamboo forest blanketed in ice and snow."
-negative_prompt = "blurry, low quality, distorted, text, watermark, extra limbs, deformed hands, overexposed, underexposed, low detail"
+
+prompt = "aerial view, a futuristic research complex in a bright foggy jungle, hard lighting"
+negative_prompt = "low quality, bad quality, sketches"
 
 image = load_image(
-   "/root/paddlejob/workspace/env_run/output/haoming/fork/PaddleMIX/ppdiffusers/examples/ppvctrl/examples/canny/case4/control_image.jpg"
+    "https://hf-mirror.com/datasets/hf-internal-testing/diffusers-images/resolve/main/sd_controlnet/hf-logo.png"
 )
 
-controlnet_conditioning_scale = 0.85  # recommended for good generalization
+controlnet_conditioning_scale = 0.5  # recommended for good generalization
 
 controlnet = ControlNetModel.from_pretrained("diffusers/controlnet-canny-sdxl-1.0", paddle_dtype=paddle.float16)
 vae = AutoencoderKL.from_pretrained("madebyollin/sdxl-vae-fp16-fix", paddle_dtype=paddle.float16)
@@ -39,8 +42,13 @@ pipe = StableDiffusionXLControlNetPipeline.from_pretrained(
     controlnet=controlnet,
     vae=vae,
     paddle_dtype=paddle.float16,
-    generator=paddle.Generator().manual_seed(42),
 )
+
+image = np.array(image)
+image = cv2.Canny(image, 100, 200)
+image = image[:, :, None]
+image = np.concatenate([image, image, image], axis=2)
+image = Image.fromarray(image)
 
 images = pipe(
     prompt,

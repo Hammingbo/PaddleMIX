@@ -30,13 +30,14 @@
 首先对源视频提取视频控制序列（边缘，蒙版，姿态）。然后利用ControlNet重新制作视频首帧。将视频控制序列和重新制作的视频首帧输入PP-VCtrl-I2V中生成新的视频。
 
 ### 边缘控制PPVCtrl-I2V
-<video src="assets/demos/canny/canny_case1.mp4" width="720" controls></video>
+<video width="100%" height="auto" style="display: block; margin: 0px auto;" controls autoplay loop src="https://hammingbo.github.io/static/videos/canny_full_size.mp4" muted="false"></video>
 
 ### 蒙版控制PPVCtrl-I2V
-<video src="assets/demos/mask/mask_case1.mp4" width="720" controls></video>
 
-### 姿态控制PPVCtrl-I2V
-<video src="assets/demos/mask/mask_case1.mp4" width="720" controls></video>
+<video width="100%" height="auto" style="display: block; margin: 0px auto;" controls autoplay loop src="https://hammingbo.github.io/static/videos/mask_full_size.mp4" muted="false"></video>
+
+<!-- ### 姿态控制PPVCtrl-I2V
+<video src="assets/demos/mask/mask_case1" width="720" controls></video> -->
 
 
 ### 1. 边缘控制的视频生成 (Canny)：
