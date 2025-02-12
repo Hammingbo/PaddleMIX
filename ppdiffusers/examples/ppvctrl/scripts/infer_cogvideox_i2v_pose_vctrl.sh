@@ -14,7 +14,7 @@
 python infer_cogvideox_i2v_vctrl_cli.py \
   --pretrained_model_name_or_path "paddlemix/cogvideox-5b-i2v-vctrl" \
   --vctrl_path "paddlemix/vctrl-5b-i2v-pose-v2-vertical" \
-    --vctrl_config "vctrl_configs/cogvideox_5b_i2v_vctrl_config.json" \
+  --vctrl_config "vctrl_configs/cogvideox_5b_i2v_vctrl_config.json" \
   --control_video_path "examples/pose/case1/guide_values.mp4" \
   --ref_image_path "examples/pose/case1/reference_image.jpg" \
   --output_dir "infer_outputs/pose2video" \
