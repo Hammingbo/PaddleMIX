@@ -25,4 +25,6 @@ python infer_cogvideox_t2v_vctrl_cli.py \
   --height 480 \
   --max_frame 49 \
   --guidance_scale 3.5 \
-  --num_inference_steps 25
+  --num_inference_steps 25 \
+ 
+  

@@ -26,63 +26,17 @@
 
 
 ## 📷 快速展示
-### PP-VCtrl-5B-I2V 生成的精彩演示 
-第一行展示的是原始视频，第一列展示的是由[flux.1-dev](https://huggingface.co/black-forest-labs/FLUX.1-dev).生成的视频首帧。获取到首帧后，我们利用自研的 PP-VCtrl-5B-I2V 生成了精彩的视频。
+### PP-VCtr-I2V 生成的精彩演示 
+首先对源视频提取视频控制序列（边缘，蒙版，姿态）。然后利用ControlNet重新制作视频首帧。将视频控制序列和重新制作的视频首帧输入PP-VCtrl-I2V中生成新的视频。
 
-### 边缘控制I2V
-<p align="center">
-  <img src="assets/demos/canny/canny_case1_guide.gif" width="192" />
-  <img src="assets/demos/canny/canny_case1_pixel.gif" width="192" />
-  <img src="assets/demos/canny/canny_case2_guide.gif" width="192" />
-  <img src="assets/demos/canny/canny_case2_pixel.gif" width="192" />
-</p>
-<p align="center">
-  <img src="assets/demos/canny/canny_case1_sub1.jpg" width="192" />
-  <img src="assets/demos/canny/canny_case1_sub1.gif" width="192" />
-  <img src="assets/demos/canny/canny_case2_sub1.jpg" width="192" />
-  <img src="assets/demos/canny/canny_case2_sub1.gif" width="192" />
-</p>
-<p align="center">
-  <img src="assets/demos/canny/canny_case1_sub2.jpg" width="192" />
-  <img src="assets/demos/canny/canny_case1_sub2.gif" width="192" />
-  <img src="assets/demos/canny/canny_case2_sub2.jpg" width="192" />
-  <img src="assets/demos/canny/canny_case2_sub2.gif" width="192" />
-</p>
+### 边缘控制PPVCtrl-I2V
+<video src="assets/demos/canny/canny_case1.mp4" width="720" controls></video>
 
-<p align="center">
-  <img src="assets/demos/canny/canny_case1_sub3.jpg" width="192" />
-  <img src="assets/demos/canny/canny_case1_sub3.gif" width="192" />
-  <img src="assets/demos/canny/canny_case2_sub3.jpg" width="192" />
-  <img src="assets/demos/canny/canny_case2_sub3.gif" width="192" />
-</p>
+### 蒙版控制PPVCtrl-I2V
+<video src="assets/demos/mask/mask_case1.mp4" width="720" controls></video>
 
-
-
-### 蒙版控制I2V
-<p align="center">
-  <img src="assets/demos/mask/mask_case1_guide.gif" width="192" />
-  <img src="assets/demos/mask/mask_case1_value.gif" width="192" />
-  <img src="assets/demos/mask/mask_case2_guide.gif" width="192" />
-  <img src="assets/demos/mask/mask_case2_value.gif" width="192" />
-</p>
-<p align="center">
-  <img src="assets/demos/mask/mask_case1_sub1.png" width="192" />
-  <img src="assets/demos/mask/mask_case1_sub1.gif" width="192" />
-  <img src="assets/demos/mask/mask_case2_sub1.png" width="192" />
-  <img src="assets/demos/mask/mask_case2_sub1.gif" width="192" />
-</p>
-<p align="center">
-  <img src="assets/demos/mask/mask_case1_sub2.png" width="192" />
-  <img src="assets/demos/mask/mask_case1_sub2.gif" width="192" />
-  <img src="assets/demos/mask/mask_case2_sub2.png" width="192" />
-  <img src="assets/demos/mask/mask_case2_sub2.gif" width="192" />
-</p>
-<p align="center">
-  <img src="assets/demos/mask/mask_case1_sub3.png" width="192" />
-  <img src="assets/demos/mask/mask_case1_sub3.gif" width="192" />
-  <img src="assets/demos/mask/mask_case2_sub3.png" width="192" />
-  <img src="assets/demos/mask/mask_case2_sub3.gif" width="192" />
-</p>
+### 姿态控制PPVCtrl-I2V
+<video src="assets/demos/mask/mask_case1.mp4" width="720" controls></video>
 
 
 ### 1. 边缘控制的视频生成 (Canny)：
