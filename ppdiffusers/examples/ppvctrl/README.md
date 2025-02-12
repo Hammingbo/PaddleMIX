@@ -25,15 +25,26 @@ These design features make PP-VCtrl suitable for a wide range of video generatio
 First, extract the video control sequences (edges, masks, and poses) from the source video. Then, use ControlNet to regenerate the first frame of the video. Input the video control sequences and the newly generated first frame into PP-VCtrl-I2V to generate the new video.
 
 ### PP-VCtrl-I2V-Canny
-<video width="100%" height="auto" style="display: block; margin: 0px auto;" controls autoplay loop src="https://hammingbo.github.io/static/videos/canny_full_size.mp4" muted="false"></video>
+| Input Video               | Control Video               | Reference       Image             | Output   Video             |
+|---------------------------|-----------------------------|-----------------------|--------------------------|
+|
+| <img src="assets/demos/canny/canny_case1_pixel.gif" > | <img src="assets/demos/canny/canny_case1_guide.gif"> </img>| <img src="assets/demos/canny/canny_case1_sub1.jpg"> | <img src="assets/demos/canny/canny_case1_sub1.gif" > </img>|
+| <img src="assets/demos/canny/canny_case2_pixel.gif" > | <img src="assets/demos/canny/canny_case2_guide.gif"> </img>| <img src="assets/demos/canny/canny_case2_sub1.jpg"> | <img src="assets/demos/canny/canny_case2_sub1.gif" > </img>|
 
 
 ### PP-VCtrl-I2V-Mask
-<video width="100%" height="auto" style="display: block; margin: 0px auto;" controls autoplay loop src="https://hammingbo.github.io/static/videos/mask_full_size.mp4" muted="false"></video>
+| Input Video               | Control Video               | Reference      Image      | Output  Video             |
+|---------------------------|-----------------------------|---------------------------|---------------------------|
+|
+| <img src="assets/demos/mask/mask_case1_pixel.gif" > | <img src="assets/demos/mask/mask_case1_guide.gif"> </img> | <img src="assets/demos/mask/mask_case1_sub1.png"> | <img src="assets/demos/mask/mask_case1_sub1.gif" > </img> |
+| <img src="assets/demos/mask/mask_case2_pixel.gif" > | <img src="assets/demos/mask/mask_case2_guide.gif"> </img> | <img src="assets/demos/mask/mask_case2_sub2.png"> | <img src="assets/demos/mask/mask_case2_sub2.gif" > </img> |
 
-<!-- ### PP-VCtrl-I2V-Pose
-
-<video src="assets/demos/pose/pose_case2.mp4" width="720" controls></video> -->
+### PP-VCtrl-I2V-Pose
+| Input Video               | Control Video               | Reference      Image      | Output  Video             |
+|----------------------|-----------------------|----------------------|-----------------------|
+|
+<img src="assets/demos/pose/pose_case1_pixel.gif" >|<img src="assets/demos/pose/pose_case1_guide.gif"> </img>|<img src="assets/demos/pose/pose_case1_sub1.jpg">|<img src="assets/demos/pose/pose_case1_sub1.gif" > </img>|
+<img src="assets/demos/pose/pose_case2_pixel.gif" >|<img src="assets/demos/pose/pose_case2_guide.gif"> </img>|<img src="assets/demos/pose/pose_case2_sub1.jpg">|<img src="assets/demos/pose/pose_case2_sub1.gif" > </img>|
 
 
 

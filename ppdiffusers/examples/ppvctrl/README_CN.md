@@ -30,14 +30,28 @@
 首先对源视频提取视频控制序列（边缘，蒙版，姿态）。然后利用ControlNet重新制作视频首帧。将视频控制序列和重新制作的视频首帧输入PP-VCtrl-I2V中生成新的视频。
 
 ### 边缘控制PPVCtrl-I2V
-<video width="100%" height="auto" style="display: block; margin: 0px auto;" controls autoplay loop src="https://hammingbo.github.io/static/videos/canny_full_size.mp4" muted="false"></video>
+| Input Video               | Control Video               | Reference      Image      | Output  Video             |
+|----------------------|-----------------------|----------------------|-----------------------|
+|
+<img src="assets/demos/canny/canny_case1_pixel.gif" >|<img src="assets/demos/canny/canny_case1_guide.gif"> </img>|<img src="assets/demos/canny/canny_case1_sub1.jpg">|<img src="assets/demos/canny/canny_case1_sub1.gif" > </img>|
+<img src="assets/demos/canny/canny_case2_pixel.gif" >|<img src="assets/demos/canny/canny_case2_guide.gif"> </img>|<img src="assets/demos/canny/canny_case2_sub1.jpg">|<img src="assets/demos/canny/canny_case2_sub1.gif" > </img>|
+
 
 ### 蒙版控制PPVCtrl-I2V
+| Input Video               | Control Video               | Reference      Image      | Output  Video             |
+|----------------------|-----------------------|----------------------|-----------------------|
+|
+<img src="assets/demos/mask/mask_case1_pixel.gif" >|<img src="assets/demos/mask/mask_case1_guide.gif"> </img>|<img src="assets/demos/mask/mask_case1_sub1.png">|<img src="assets/demos/mask/mask_case1_sub1.gif" > </img>|
+<img src="assets/demos/mask/mask_case2_pixel.gif" >|<img src="assets/demos/mask/mask_case2_guide.gif"> </img>|<img src="assets/demos/mask/mask_case2_sub2.png">|<img src="assets/demos/mask/mask_case2_sub2.gif" > </img>|
 
-<video width="100%" height="auto" style="display: block; margin: 0px auto;" controls autoplay loop src="https://hammingbo.github.io/static/videos/mask_full_size.mp4" muted="false"></video>
+### 姿态控制PPVCtrl-I2V
+| Input Video               | Control Video               | Reference      Image      | Output  Video             |
+|----------------------|-----------------------|----------------------|-----------------------|
+|
+<img src="assets/demos/pose/pose_case1_pixel.gif" >|<img src="assets/demos/pose/pose_case1_guide.gif"> </img>|<img src="assets/demos/pose/pose_case1_sub1.jpg">|<img src="assets/demos/pose/pose_case1_sub1.gif" > </img>|
+<img src="assets/demos/pose/pose_case2_pixel.gif" >|<img src="assets/demos/pose/pose_case2_guide.gif"> </img>|<img src="assets/demos/pose/pose_case2_sub1.jpg">|<img src="assets/demos/pose/pose_case2_sub1.gif" > </img>|
 
-<!-- ### 姿态控制PPVCtrl-I2V
-<video src="assets/demos/mask/mask_case1" width="720" controls></video> -->
+
 
 
 ### 1. 边缘控制的视频生成 (Canny)：
@@ -115,13 +129,13 @@
     <tbody>
         <tr>
             <td>A young man with curly hair and a red t-shirt featuring a white logo is seen in various states of motion... </td>  
-            <td><img src="assets/figures/pose_case1_reference1.jpg" alt="Reference 1" width="160"></td> 
+            <td><img src="assets/figures/pose_case1_reference1.jpg" alt="Reference 1" width="200"></td> 
            <td><img src="assets/figures/pose_case1_control_image.gif" alt="Pose Videos" width="160"></td>
             <td><img src="assets/figures/pose_case1_ours_1.gif" alt="Ours 1" width="160"></td>
         </tr>
         <tr>
             <td>A woman models an Adrianna Papell women's gown, featuring a sleeveless...</td> 
-            <td><img src="assets/figures/pose_case2_reference2.jpg" alt="Reference 1" width="160"></td> 
+            <td><img src="assets/figures/pose_case2_reference2.jpg" alt="Reference 1" width="200"></td> 
             <td><img src="assets/figures/pose_case2_control_image.gif" alt="Pose Videos" width="160"></td>
             <td><img src="assets/figures/pose_case2_ours_2.gif" alt="Ours 1" width="160"></td>
         </tr>
