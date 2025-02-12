@@ -27,25 +27,21 @@ First, extract the video control sequences (edges, masks, and poses) from the so
 ### PP-VCtrl-I2V-Canny
 | Input Video               | Control Video               | Reference       Image             | Output   Video             |
 |---------------------------|-----------------------------|-----------------------|--------------------------|
-|
-| <img src="assets/demos/canny/canny_case1_pixel.gif" > | <img src="assets/demos/canny/canny_case1_guide.gif"> </img>| <img src="assets/demos/canny/canny_case1_sub1.jpg"> | <img src="assets/demos/canny/canny_case1_sub1.gif" > </img>|
-| <img src="assets/demos/canny/canny_case2_pixel.gif" > | <img src="assets/demos/canny/canny_case2_guide.gif"> </img>| <img src="assets/demos/canny/canny_case2_sub1.jpg"> | <img src="assets/demos/canny/canny_case2_sub1.gif" > </img>|
+<img src="https://raw.githubusercontent.com/Hammingbo/Hammingbo.github.io/refs/heads/main/static/gif/canny/canny_case1_pixel.gif" >|<img src="https://raw.githubusercontent.com/Hammingbo/Hammingbo.github.io/refs/heads/main/static/gif/canny/canny_case1_guide.gif"> </img>|<img src="https://raw.githubusercontent.com/Hammingbo/Hammingbo.github.io/refs/heads/main/static/gif/canny/canny_case1_sub1.jpg">|<img src="https://raw.githubusercontent.com/Hammingbo/Hammingbo.github.io/refs/heads/main/static/gif/canny/canny_case1_sub1.gif" > </img>|
+<img src="https://raw.githubusercontent.com/Hammingbo/Hammingbo.github.io/refs/heads/main/static/gif/canny/canny_case2_pixel.gif" >|<img src="https://raw.githubusercontent.com/Hammingbo/Hammingbo.github.io/refs/heads/main/static/gif/canny/canny_case2_sub1.jpg"> </img>|<img src="https://raw.githubusercontent.com/Hammingbo/Hammingbo.github.io/refs/heads/main/static/gif/canny/canny_case2_sub1.jpg">|<img src="assets/demos/canny/canny_case2_sub1.gif" > </img>
 
 
 ### PP-VCtrl-I2V-Mask
 | Input Video               | Control Video               | Reference      Image      | Output  Video             |
 |---------------------------|-----------------------------|---------------------------|---------------------------|
-|
-| <img src="assets/demos/mask/mask_case1_pixel.gif" > | <img src="assets/demos/mask/mask_case1_guide.gif"> </img> | <img src="assets/demos/mask/mask_case1_sub1.png"> | <img src="assets/demos/mask/mask_case1_sub1.gif" > </img> |
-| <img src="assets/demos/mask/mask_case2_pixel.gif" > | <img src="assets/demos/mask/mask_case2_guide.gif"> </img> | <img src="assets/demos/mask/mask_case2_sub2.png"> | <img src="assets/demos/mask/mask_case2_sub2.gif" > </img> |
+<img src="https://raw.githubusercontent.com/Hammingbo/Hammingbo.github.io/refs/heads/main/static/gif/mask/mask_case1_pixel.gif" >|<img src="https://raw.githubusercontent.com/Hammingbo/Hammingbo.github.io/refs/heads/main/static/gif/mask/mask_case1_guide.gif"> </img>|<img src="https://raw.githubusercontent.com/Hammingbo/Hammingbo.github.io/refs/heads/main/static/gif/mask/mask_case1_sub1.jpg">|<img src="https://raw.githubusercontent.com/Hammingbo/Hammingbo.github.io/refs/heads/main/static/gif/mask/mask_case1_sub1.gif" > </img>|
+<img src="https://raw.githubusercontent.com/Hammingbo/Hammingbo.github.io/refs/heads/main/static/gif/mask/mask_case2_pixel.gif" >|<img src="https://raw.githubusercontent.com/Hammingbo/Hammingbo.github.io/refs/heads/main/static/gif/mask/mask_case2_guide.gif"> </img>|<img src="https://raw.githubusercontent.com/Hammingbo/Hammingbo.github.io/refs/heads/main/static/gif/mask/mask_case2_sub2.jpg">|<img src="assets/demos/mask/mask_case2_sub2.gif" > </img>|
 
 ### PP-VCtrl-I2V-Pose
 | Input Video               | Control Video               | Reference      Image      | Output  Video             |
 |----------------------|-----------------------|----------------------|-----------------------|
-|
-<img src="assets/demos/pose/pose_case1_pixel.gif" >|<img src="assets/demos/pose/pose_case1_guide.gif"> </img>|<img src="assets/demos/pose/pose_case1_sub1.jpg">|<img src="assets/demos/pose/pose_case1_sub1.gif" > </img>|
-<img src="assets/demos/pose/pose_case2_pixel.gif" >|<img src="assets/demos/pose/pose_case2_guide.gif"> </img>|<img src="assets/demos/pose/pose_case2_sub1.jpg">|<img src="assets/demos/pose/pose_case2_sub1.gif" > </img>|
-
+<img src="https://raw.githubusercontent.com/Hammingbo/Hammingbo.github.io/refs/heads/main/static/gif/pose/pose_case1_pixel.gif" >|<img src="https://raw.githubusercontent.com/Hammingbo/Hammingbo.github.io/refs/heads/main/static/gif/pose/pose_case1_guide.gif"> </img>|<img src="https://raw.githubusercontent.com/Hammingbo/Hammingbo.github.io/refs/heads/main/static/gif/pose/pose_case1_sub1.jpg">|<img src="https://raw.githubusercontent.com/Hammingbo/Hammingbo.github.io/refs/heads/main/static/gif/pose/pose_case1_sub1.gif" > </img>|
+<img src="https://raw.githubusercontent.com/Hammingbo/Hammingbo.github.io/refs/heads/main/static/gif/pose/pose_case2_pixel.gif" >|<img src="https://raw.githubusercontent.com/Hammingbo/Hammingbo.github.io/refs/heads/main/static/gif/pose/pose_case2_guide.gif"> </img>|<img src="https://raw.githubusercontent.com/Hammingbo/Hammingbo.github.io/refs/heads/main/static/gif/pose/pose_case2_sub1.jpg">|<img src="assets/demos/pose/pose_case2_sub1.gif" > </img>|
 
 
 
