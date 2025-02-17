@@ -1,5 +1,8 @@
 English | [简体中文](README_CN.md)
 # PP-VCtrl
+<a href='https://hammingbo.github.io/ppvctrl/'>
+      <img src='https://img.shields.io/badge/Project_Page-ppvctrl-blue' alt='Project Page'></a>
+      
 **PP-VCtrl** is a controllable video generation model that uses an auxiliary condition encoder to transform a text-to-video generation model into a custom video generator, without retraining of the original generator. 
 
 The model employs a unified encoding process to convert various control inputs into standardized formats，along with sparse residual connections to efficiently integrate controllable information into the generator. Additionally, it applies task-specific masks to enhance adaptability. 
